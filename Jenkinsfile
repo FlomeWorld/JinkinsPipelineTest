@@ -14,7 +14,7 @@ pipeline {
         }
         success {
             echo 'I succeeeded!'
-            mail to: 'flomeworld@.163com',
+            mail to: 'flomeworld@163.com',
                          subject: "Failed Pipeline:",
                          body: "Something is wrong with "
         }
