@@ -9,9 +9,11 @@ pipeline {
         stage('deploy') {
             steps {
                 retry(3) {
+                    chmod +777 ./hack/flakey-deploy.sh
                     sh './hack/flakey-deploy.sh'
                 }
                 timeout(time: 3, unit: 'MINUTES') {
+                    chmod +777 ./hack/health-check.sh
                     sh './hack/health-check.sh'
                 }
             }
