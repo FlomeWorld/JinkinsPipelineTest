@@ -1,0 +1,2 @@
+# JinkinsPipelineTest
+for jinkins study
